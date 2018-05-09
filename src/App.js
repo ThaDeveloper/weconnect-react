@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Business from './components/Business/Business';
+import Businesses from './components/Business/Businesses';
 import Navigation from './components/Navigation';
+import Title from './components/Business/Title';
 import './components/main.css';
 
 export default class App extends Component {
@@ -9,8 +10,10 @@ export default class App extends Component {
     return (
       <div>
         <Navigation />
-        
-        <Business />
+        <div className="main-content">
+          <Title />
+          <Businesses />
+        </div>
         
      </div>
     )

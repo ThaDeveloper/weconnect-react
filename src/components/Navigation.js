@@ -3,27 +3,27 @@ import React from "react";
 // Stateless functional Component
 const Navigation = props => (
         <div>
-            <div class="header">
-                <div class="logo">
+            <div className="header">
+                <div className="logo">
                     <a href="index.html">
-                        <i class="fa fa-connectdevelop"></i>
+                        <i className="fa fa-connectdevelop"></i>
                         <span>weConnect</span>
                     </a>
                 </div>
-                <a href="#" class="nav-trigger"><span></span></a>
+                <a href="#" className="nav-trigger"><span></span></a>
             </div>
-            <div class="side-nav">
-                <div class="logo">
+            <div className="side-nav">
+                <div className="logo">
                     <a href="index.html">
-                        <i class="fa fa-connectdevelop"></i>
+                        <i className="fa fa-connectdevelop"></i>
                         <span>weConnect</span>
                     </a>
                 </div>
                 <nav>
                     <ul>
-                        <li class="active">
+                        <li className="active">
                             <a href="index.html">
-                                <span><i class="fa fa-briefcase"></i></span>
+                                <span><i className="fa fa-briefcase"></i></span>
                                 <span>Businesseses</span>
                             </a>
                         </li>
@@ -31,28 +31,28 @@ const Navigation = props => (
                         <li>
                             
                             <a href="">
-                                <span><i class="fa fa-users"></i></span>
+                                <span><i className="fa fa-users"></i></span>
                                 <span>Users</span>
                             </a>
                         </li>
                         <li>
                                     
                             <a href="">
-                                <span><i class="fa fa-user"></i></span>
+                                <span><i className="fa fa-user"></i></span>
                                 <span>Account</span>
                             </a>
                         </li>
                         <li>
                                     
                             <a href="login.html">
-                                <span><i class="fa fa-sign-in"></i></span>
+                                <span><i className="fa fa-sign-in"></i></span>
                                 <span>Login</span>
                             </a>
                                     
                         </li>
                         <li>
                             <a href="register.html">
-                                <span><i class="fa fa-registered"></i></span>
+                                <span><i className="fa fa-registered"></i></span>
                                 <span>Register</span>
                             </a>
                                     
