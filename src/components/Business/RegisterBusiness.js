@@ -1,5 +1,5 @@
 import React from 'react';
-import '../main.css';
+
 
 const RegisterBusiness = props => (
     <div className="col-md-4">
