@@ -1,44 +1,33 @@
 import React, { Component } from 'react';
+import BusinessItem from './BusinessItem'
 import '../main.css';
 
 export default class Businesses extends Component {
+    state = {
+        businesses: []
+    }
+
+    componentWillMount() {
+        this.getBusinesses();
+    }
+
+    getBusinesses = async () => {
+        const api_call = await fetch(`https://cors-anywhere.herokuapp.com/app-weconnect.herokuapp.com/api/v2/businesses/?limit=10`);
+        const data = await api_call.json();
+        this.setState({
+            businesses: data.businesses
+        });
+    }
     render() {
+        const { businesses } = this.state;
+        const business = businesses.map(business =>
+          <BusinessItem business={business} key={business.id}/> 
+        );
+     
         return (
             <div className="panel-body">
                 <div className="main">
-                    <div className="widget">
-                        <div className="title">Google</div>
-                        <div className="widget-body">
-                            <div className="text-center">
-                                <img src="images/google.png" className="img-fluid" alt="Google, Inc. Logo" />
-                            </div>
-                        </div>
-                        <div className="widget-footer">
-                            <a role="button" href="business.html" className="btn btn-warning btn-lg spull-left">View Profile</a>
-                        </div>
-                    </div>
-                    <div className="widget">
-                        <div className="title">Amazon</div>
-                        <div className="widget-body">
-                                <div className="text-center">
-                                        <img src="images/amazon.png" className="img-fluid" alt="Amazon, Inc. Logo" />
-                                    </div>
-                        </div>
-                        <div className="widget-footer">
-                            <a role="button" href="business.html" className="btn btn-warning btn-lg pull-left">View Profile</a>
-                        </div>
-                    </div>
-                    <div className="widget">
-                        <div className="title">Apple</div>
-                        <div className="widget-body">
-                            <div className="text-center">
-                                <img src="images/apple.png" className="img-fluid" alt="Apple, Inc. Logo" />
-                            </div>
-                        </div>
-                        <div className="widget-footer">
-                            <a role="button" href="business.html" className="btn btn-warning btn-lg pull-left">View Profile</a>
-                        </div>
-                    </div>
+                    { business }
                 </div>
             </div>
         );
