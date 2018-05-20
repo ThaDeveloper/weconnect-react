@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import './App.css';
-import Businesses from './components/Business/Businesses';
+import { Route, Switch } from 'react-router-dom';
+import Business from './components/Business/Business';
 import Navigation from './components/Navigation';
-import Title from './components/Business/Title';
-import './components/main.css';
+import HomePage from './components/HomePage';
+import './assets/css/main.css';
 
 export default class App extends Component {
   render() {
     return (
       <div>
         <Navigation />
-        <div className="main-content">
-          <Title />
-          <Businesses />
-        </div>
-        
-     </div>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/business/:id" exact component={Business} />
+        </Switch>
+      </div>
     )
   }
 }

@@ -1,30 +1,32 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+import '../assets/js/main.js';
 
 // Stateless functional Component
 const Navigation = props => (
         <div>
             <div className="header">
                 <div className="logo">
-                    <a href="index.html">
+                    <Link to="/" >
                         <i className="fa fa-connectdevelop"></i>
                         <span>weConnect</span>
-                    </a>
+                    </Link>
                 </div>
-                <a href="#" className="nav-trigger"><span></span></a>
+                <Link to="#" className="nav-trigger"><span></span></Link>
             </div>
             <div className="side-nav">
                 <div className="logo">
-                    <a href="index.html">
+                    <Link to="/" >
                         <i className="fa fa-connectdevelop"></i>
                         <span>weConnect</span>
-                    </a>
+                    </Link>
                 </div>
                 <nav>
                     <ul>
                         <li className="active">
                             <a href="index.html">
                                 <span><i className="fa fa-briefcase"></i></span>
-                                <span>Businesseses</span>
+                                <span>Businesses</span>
                             </a>
                         </li>
                                 

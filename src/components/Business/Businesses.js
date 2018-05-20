@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import BusinessItem from './BusinessItem'
-import '../main.css';
 
 export default class Businesses extends Component {
     state = {

@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const BusinessItem = ({ business }) => (
     <div className="widget">
         <div className="title">
-            {/* <Link to={`/${business.id}`}> */}
+            <Link to={`/business/${business.id}`} id="business_link">
                 { business.name }
-            {/* </Link> */}
+            </Link>
         </div>
         <div className="widget-body">
             <div className="text-center">
@@ -15,9 +15,9 @@ const BusinessItem = ({ business }) => (
             </div>
         </div>
         <div className="widget-footer">
-            {/* <Link to={`/${business.id}`}> */}
-                <a role="button"  className="btn btn-warning btn-lg spull-left">View Profile</a>
-            {/* </Link> */}
+            <Link to={`business/${business.id}`} className="btn btn-warning btn-lg spull-left">
+                  View Profile
+            </Link>
             
         </div>
     </div>
