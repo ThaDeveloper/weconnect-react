@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BusinessItem from './BusinessItem'
+import BASE_URL from '../../utils/url.js';
 
 export default class Businesses extends Component {
     state = {
@@ -11,7 +12,7 @@ export default class Businesses extends Component {
     }
 
     getBusinesses = async () => {
-        const api_call = await fetch(`https://cors-anywhere.herokuapp.com/app-weconnect.herokuapp.com/api/v2/businesses/?limit=10`);
+        const api_call = await fetch(`${BASE_URL}/businesses/?limit=10`);
         const data = await api_call.json();
         this.setState({
             businesses: data.businesses
