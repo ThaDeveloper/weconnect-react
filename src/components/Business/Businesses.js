@@ -23,8 +23,9 @@ export default class Businesses extends Component {
     }
     searchBusinesses = async (e) => {
     	e.preventDefault();
-    	const search =  e.target.elements.search.value;
-    	const api_call = await fetch(`${BASE_URL}/businesses/?category=${search}&limit=10`);
+        const search =  e.target.elements.search.value;
+        const cat = e.target.elements.sel_category.value;
+        const api_call = await fetch(`${BASE_URL}/businesses/?q=${search}&location=${search}&category=${cat}&limit=10`);
     	const data = await api_call.json();
     	this.setState({
     		businesses: data.businesses,
@@ -42,10 +43,10 @@ export default class Businesses extends Component {
             <div>
                 <div className="title">
                     <div className="row">
-                        <div className="col-md-4"> 
+                        <div className="col-md-2"> 
                             <label>Busines Profiles</label>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-8">
                             <SearchForm searchBusinesses ={this.searchBusinesses} />
                         </div>
                        <RegisterBusiness />
