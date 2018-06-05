@@ -13,7 +13,7 @@ const SearchForm = props => (
 			</div>
 			<div className="col-md-6">
 				<select className="form-control" name="sel_category">
-					<option value="" selected disabled>Category...</option>
+					<option value="">Category...</option>
 					<option value="Tech">Tech</option>
 					<option value="Health">Health</option>
 					<option value="Agriculture">Agriculture</option>
@@ -22,7 +22,7 @@ const SearchForm = props => (
 			  </div>
 			  </div>
 			<span className="input-group-btn">
-			    <button className="btn btn-info" onClick={this.handleClick}><i className="fa fa-search" ></i>Search</button>
+			    <button className="btn btn-info"><i className="fa fa-search" ></i>Search</button>
 			</span>
 		</div>
 	</form>
