@@ -24,7 +24,7 @@ const Navigation = props => (
                 <nav>
                     <ul>
                         <li className="active">
-                            <a href="index.html">
+                            <a href="">
                                 <span><i className="fa fa-briefcase"></i></span>
                                 <span>Businesses</span>
                             </a>

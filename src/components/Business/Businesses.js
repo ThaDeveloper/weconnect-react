@@ -26,16 +26,29 @@ export default class Businesses extends Component {
     	e.preventDefault();
         const search =  e.target.elements.search.value;
         const cat = e.target.elements.sel_category.value;
-        const api_call = await fetch(`${BASE_URL}/businesses/?q=${search}&location=${search}&category=${cat}&limit=10`);
-        const data = await api_call.json();
-        if (data.Message) {
+        const location_call = await fetch(`${BASE_URL}/businesses/?q=${search}&location=${search}&category=${cat}&limit=10`);
+        const name_call = await fetch(`${BASE_URL}/businesses/?q=${search}&category=${cat}&limit=10`);
+        const data_loc = await location_call.json();
+        const data_name = await name_call.json();
+        if (data_loc.Message) {
             this.setState({
                 error: "No businesses match your criteria!",
                 businesses: []
             });
         } else {
             this.setState({
-                businesses: data.businesses,
+                businesses: data_loc.businesses,
+                error: ''
+            });
+        }
+        if (data_name.Message) {
+            this.setState({
+                error: "No businesses match your criteria!",
+                businesses: []
+            });
+        } else {
+            this.setState({
+                businesses: data_name.businesses,
                 error: ''
             });
         }

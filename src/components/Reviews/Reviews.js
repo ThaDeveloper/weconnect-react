@@ -23,7 +23,7 @@ export default class Reviews extends Component {
     render() {
         console.log(this.state);
         const { reviews } = this.state;
-        const { business_id } = this.props;
+        // const { business_id } = this.props;
         const review = reviews.map(review =>
           <Review review={review} key={review.id} /> 
         );

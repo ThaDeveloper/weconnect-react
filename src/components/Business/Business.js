@@ -17,7 +17,7 @@ export default class Business extends Component {
     }
 
     getBusiness = async () => {
-        const paramId = this.props.match.params.id;
+        // const paramId = this.props.match.params.id;
         const api_call = await fetch(`${BASE_URL}/businesses/${this.paramId}`);
         const data = await api_call.json();
         this.setState({
