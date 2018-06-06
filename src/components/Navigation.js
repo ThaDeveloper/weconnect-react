@@ -39,24 +39,24 @@ const Navigation = props => (
                         </li>
                         <li>
                                     
-                            <a href="">
+                            <Link to="">
                                 <span><i className="fa fa-user"></i></span>
                                 <span>Account</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
                                     
-                            <a href="login.html">
+                            <Link to="/auth/login">
                                 <span><i className="fa fa-sign-in"></i></span>
                                 <span>Login</span>
-                            </a>
+                            </Link>
                                     
                         </li>
                         <li>
-                            <a href="register.html">
+                            <Link to="/auth/register">
                                 <span><i className="fa fa-registered"></i></span>
                                 <span>Register</span>
-                            </a>
+                            </Link>
                                     
                         </li>
                     </ul>
